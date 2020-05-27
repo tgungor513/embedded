@@ -36,26 +36,52 @@
 		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
 	
- // TG - update Case
-        embedded_svc.settings.extraPrechatFormDetails = [{
-             "label": "Case Number",
-              "value": "05411318",
-              "displayToAgent": true
-        }];
-            
-        embedded_svc.settings.extraPrechatInfo = [{
-              "entityFieldMaps": [{
-                "doCreate": false,
-                "doFind": true,
-                "fieldName": "CaseNumber",
-                "isExactMatch": true,
-                "label": "Case Number"
-              }],
-          "entityName": "Case"
-        }];		
+ 		
+	// TG - update Case		
+
+   //     embedded_svc.settings.extraPrechatFormDetails = [{
+ //            "label": "Case Number",
+ //             "value": "05411318",
+  //            "displayToAgent": true
+ //       }];
+
+	embedded_svc.settings.extraPrechatFormDetails = [{
+		"label":"Case ID",
+		"value":"5001j000005BKr3AAG",
+		"transcriptFields":[],
+		"displayToAgent":true
+	}] ;
+		
+     //   embedded_svc.settings.extraPrechatInfo = [{
+       //       "entityFieldMaps": [{
+         //       "doCreate": false,
+          //      "doFind": true,
+         //       "fieldName": "CaseNumber",
+          //      "isExactMatch": true,
+          //      "label": "Case Number"
+          //    }],
+ //         "entityName": "Case"
+   //     }];		
 
 		
-// embedded_svc.settings.extraPrechatInfo = [{"entityFieldMaps":[{"doCreate":false,"doFind":false,"fieldName":"LastName","isExactMatch":true,"label":"Last Name"},{"doCreate":false,"doFind":false,"fieldName":"FirstName","isExactMatch":true,"label":"First Name"}, {"doCreate":false,"doFind":false,"fieldName":"Email","isExactMatch":true,"label":"Email"}],"entityName":"Contact","saveToTranscript":"Contact","showOnCreate":false}];
+embedded_svc.settings.extraPrechatInfo = [{
+	"entityFieldMaps":[{
+		"isExactMatch":true,
+		"fieldName":"Id",
+		"doCreate":false,
+		"doFind":true,
+		"label":"Case ID"
+		]},
+	
+	"entityName":"Case",
+	"showOnCreate":false,
+	 //"linkToEntityName":"Case",
+	 //"linkToEntityField":"ContactId",
+	 "saveToTranscript":"CaseID"
+	}] 
+	//{"entityName":"Account","showOnCreate":true,"entityFieldMaps":[{"isExactMatch":true,"fieldName":"Name","doCreate":true,"doFind":true,"label":"LastName"}]}];
+
+
 		
 		
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
