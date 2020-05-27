@@ -64,22 +64,18 @@
    //     }];		
 
 		
-embedded_svc.settings.extraPrechatInfo = [{
-	"entityFieldMaps":[{
-		"isExactMatch":true,
-		"fieldName":"Id",
-		"doCreate":false,
-		"doFind":true,
-		"label":"Case ID"
-		]},
-	"entityName":"Case",
-	//"showOnCreate":false,
-	 //"linkToEntityName":"Case",
-	 //"linkToEntityField":"ContactId",
-	 "saveToTranscript":"CaseID"
-	}] 
-	//{"entityName":"Account","showOnCreate":true,"entityFieldMaps":[{"isExactMatch":true,"fieldName":"Name","doCreate":true,"doFind":true,"label":"LastName"}]}];
-		
+	embedded_svc.settings.extraPrechatInfo = [{
+		"entityFieldMaps":[{
+			"isExactMatch":true,
+			"fieldName":"Id",
+			"doCreate":false,
+			"doFind":true,
+			"label":"Case ID"
+			]},
+		"entityName":"Case",
+	 	"saveToTranscript":"CaseID"
+		}] ;
+	
 		
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
