@@ -1,0 +1,33 @@
+<html>
+<body>
+<script type='text/javascript' src='https://c.la1-c1cs-cdg.salesforceliveagent.com/content/g/js/48.0/deployment.js'></script>
+<script type='text/javascript'>
+liveagent.init('https://d.la1-c1cs-cdg.salesforceliveagent.com/chat', '572b00000000APz', '00D1j0000000QG2');
+
+    liveagent.addCustomDetail('Case ID','5001j000005BKr3AAG');
+/*	liveagent.addCustomDetail('Case ID', result).map('Case', 'id', false, true);
+    liveagent.addCustomDetail('Case ID', result).saveToTranscript('Case');
+
+*/
+
+
+liveagent.findOrCreate("Case").map("id","Case ID",true,false,true).saveToTranscript("Case Id").showOnCreate();
+
+
+
+</script>
+
+<h2>My Test Page</h2>
+
+
+<img id="liveagent_button_online_573b00000000AQd" style="display: none; border: 0px none; cursor: pointer" onclick="liveagent.startChat('573b00000000AQd')" src="https://test-gittigidiyor.cs102.force.com/canlidestek/resource/1515637849000/OnlineChatButton" /><img id="liveagent_button_offline_573b00000000AQd" style="display: none; border: 0px none; " src="https://test-gittigidiyor.cs102.force.com/canlidestek/resource/1475027608000/OfflineChatButton" />
+<script type="text/javascript">
+if (!window._laq) { window._laq = []; }
+window._laq.push(function(){liveagent.showWhenOnline('573b00000000AQd', document.getElementById('liveagent_button_online_573b00000000AQd'));
+liveagent.showWhenOffline('573b00000000AQd', document.getElementById('liveagent_button_offline_573b00000000AQd'));
+});</script>
+
+
+
+</body>
+</html>
