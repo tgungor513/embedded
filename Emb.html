@@ -87,6 +87,16 @@
 		
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
+
+		
+embedded_svc.liveAgentAPI.startChat({
+	directToAgentRouting: {
+	buttonId: “5731j0000004DEb”,
+	// userId: “”,
+	fallback: false
+},
+});
+
 		
 		embedded_svc.init(
 			'https://gittigidiyor--TEST.cs102.my.salesforce.com',
@@ -116,13 +126,6 @@
 		initESW('https://service.force.com');
 	}
 
-embedded_svc.liveAgentAPI.startChat({
-	directToAgentRouting: {
-	buttonId: “5731j0000004DEb”,
-	// userId: “”,
-	fallback: false
-},
-});
 	
 	
 </script>
