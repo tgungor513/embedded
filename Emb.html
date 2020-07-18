@@ -33,9 +33,9 @@
 		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
 
 		// Settings for Chat
-		embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
-			return "5731j0000004DEb";
-		};
+		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+		//	return "5731j0000004DEb";
+		//};
 		
 		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
 		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
@@ -71,16 +71,6 @@
 		
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
-
-		
-//embedded_svc.liveAgentAPI.startChat({
-//	directToButtonRouting: {
-//	buttonId: “5731j0000004DEb”
-//	// userId: “”,
-//	fallback: false
-//},
-//});
-
 		
 		embedded_svc.init(
 			'https://gittigidiyor--TEST.cs102.my.salesforce.com',
