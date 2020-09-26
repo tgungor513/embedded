@@ -2,93 +2,132 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	</head>
-<body onload="startEmbeddedChat('5000X000029GM62')">
+<body onload="startEmbeddedChat('','Argun','Semavi')">
 
-<h1>Welcome to PROD GG Chat</h1>
-<p><a href="indexPROD.html">Back</a></p>
+<h1>Welcome to GG Chat (Auto-start with contact) 1434</h1>
+<p>Please click "chat" button to talk to an agent about one of the following records:</p>
+<p><a href="index.html">Back</a></p>
 
+
+<table border="1">
+<tr>
+<td>Record1</td><td><Chat</td>
+</tr>
+<tr>
+<td>Record2</td><td><button onclick="startEmbeddedChat('5001j000005BKpbAAG')">Chat</button></td>
+</tr>
+<tr>
+<td>Record3</td><td><button onclick="startEmbeddedChat('5001j000005BKr3AAG')">Chat</button></td>
+</tr>
+<tr>
+<td>Record4</td><td>Chat</td>
+</tr>
+</table>
 
 
 <style type='text/css'>
-              .embeddedServiceHelpButton .helpButton .uiButton {
-                             background-color: #3665f3;
-                             font-family: "Salesforce Sans", sans-serif;
-              }
-              .embeddedServiceHelpButton .helpButton .uiButton:focus {
-                             outline: 1px solid #3665f3;
-              }
-              @font-face {
-                             font-family: 'Salesforce Sans';
-                             src: url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff') format('woff'),
-                             url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf') format('truetype');
-              }
+    .embeddedServiceHelpButton .helpButton .uiButton {
+        background-color: #3665f3;
+        font-family: "Salesforce Sans", sans-serif;
+    }
+    .embeddedServiceHelpButton .helpButton .uiButton:focus {
+        outline: 1px solid #3665f3;
+    }
+    @font-face {
+        font-family: 'Salesforce Sans';
+        src: url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff') format('woff'),
+        url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf') format('truetype');
+    }
 </style>
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
-              var initESW = function(gslbBaseURL) {
-                             embedded_svc.settings.displayHelpButton = false; //Or false
-                             embedded_svc.settings.language = 'tr'; //For example, enter 'en' or 'en-US'
 
-                             //embedded_svc.settings.defaultMinimizedText = 'Canlı Yardım'; //(Defaults to Chat with an Expert)
-                             //embedded_svc.settings.disabledMinimizedText = 'Çevrim Dışı'; //(Defaults to Agent Offline)
+    var initESW = function(gslbBaseURL) {
+        embedded_svc.settings.displayHelpButton = false; //Or false
+        embedded_svc.settings.language = 'tr'; //For example, enter 'en' or 'en-US'
 
-                             //embedded_svc.settings.loadingText = 'Yükleniyor'; //(Defaults to Loading)
-                             //embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+        embedded_svc.settings.defaultMinimizedText = 'Canlı Yardım'; //(Defaults to Chat with an Expert)
+        embedded_svc.settings.disabledMinimizedText = 'Çevrim Dışı'; //(Defaults to Agent Offline)
 
-                             // Settings for Chat
-                             //embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
-                                           // Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
-                                           // Returns a valid button ID.
-                             //};
-                             //embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
-                             //embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
-                             //embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+        embedded_svc.settings.loadingText = 'Yükleniyor'; //(Defaults to Loading)
+        //embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
 
-							// TG - automatically opens post-chat URL for survey
-     						 embedded_svc.settings.autoOpenPostChat = true;
+        // Settings for Chat
+        //embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+        //    return "5731j0000004DEb";
+        //};
 
-                             embedded_svc.settings.enabledFeatures = ['LiveAgent'];
-                             embedded_svc.settings.entryFeature = 'LiveAgent';
+        //embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
+        //embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+        //embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
 
-                             embedded_svc.init(
-                                           'https://gittigidiyor.my.salesforce.com',
-                                           'https://yardim.gittigidiyor.net/',
-                                           gslbBaseURL,
-                                           '00Db0000000bTrg',
-                                           'GG_Canli_Yardim',
-                                           {
-                                                          baseLiveAgentContentURL: 'https://c.la1-c2-frf.salesforceliveagent.com/content',
-                                                          deploymentId: '572b00000000APz',
-                                                          buttonId: '5730X000000XfWn',
-                                                         baseLiveAgentURL: 'https://d.la1-c2-frf.salesforceliveagent.com/chat',
-                                                          eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I0X000000fy1zUAA_174440e36b8',
-                                                          isOfflineSupportEnabled: false
-                                           }
-                             );
-              };
 
-              if (!window.embedded_svc) {
-                             var s = document.createElement('script');
-                             s.setAttribute('src', 'https://gittigidiyor.my.salesforce.com/embeddedservice/5.0/esw.min.js');
-                             s.onload = function() {
-                                           initESW(null);
-                             };
-                             document.body.appendChild(s);
-              } else {
-                             initESW('https://service.force.com');
-              }
+    embedded_svc.settings.autoOpenPostChat = true;
+
+
+
+
+
+        embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+        embedded_svc.settings.entryFeature = 'LiveAgent';
+				//--------------------------------------------
+				var isChatEndedByUser = false;
+				embedded_svc.addEventHandler("afterDestroy", function(data) {
+
+                var chatDetails='{"prechatDetails":[{"label":"Case ID","value":"';
+                chatDetails+='5001j000005zhSPAAY';
+                chatDetails+='","entityMaps":[],"transcriptFields":[],"displayToAgent":true,"doKnowledgeSearch":false},{"label":"eswLiveAgentDevName","value":"EmbeddedServiceLiveAgent_Parent04I1j0000004CQdEAM_1723780d429","entityMaps":[],"transcriptFields":[],"displayToAgent":false,"doKnowledgeSearch":false},{"label":"hasOnlyExtraPrechatInfo","value":false,"entityMaps":[],"transcriptFields":[],"displayToAgent":false,"doKnowledgeSearch":false}],"geoLocation":{"organization":"Tellcom Iletisim Hizmetleri A.s.","region":"35","city":"Izmir","countryName":"Turkey","latitude":38.4127,"countryCode":"TR","longitude":27.1384},"visitorId":"3219e95d-19f5-47f5-b3de-2453596c146c","customDetails":[],"agent":{"userId":"0050X000008UfSv","agentName":"Ertuğrul - GittiGidiyor Müşteri Hizmetleri","transfer":0}}';
+                if(!isChatEndedByUser){
+									window.open("https://test-gittigidiyor.cs102.force.com/postchatpagevfredirection/PostChatPage?chatDetails="+chatDetails+"&isDestroyed=true",'_blank',);
+                }
+
+                console.log("afterDestroy event was fired.");
+            });
+						embedded_svc.addEventHandler("onChatEndedByChasitor", function(data) {
+		                isChatEndedByUser = true;
+		                console.log("onChatEndedByChasitor event was fired. ");
+		            });
+				//--------------------------------------------
+
+        embedded_svc.init(
+            'https://gittigidiyor--TEST.cs102.my.salesforce.com',
+            'https://test-gittigidiyor-tr.cs102.force.com',
+            gslbBaseURL,
+            '00D1j0000000QG2',
+            'GG_Embedded_Chat_Test',
+            {
+                baseLiveAgentContentURL: 'https://c.la1-c1cs-cdg.salesforceliveagent.com/content',
+                deploymentId: '572b00000000APz',
+                buttonId: '5731j0000004DEb',
+                baseLiveAgentURL: 'https://d.la1-c1cs-cdg.salesforceliveagent.com/chat',
+                eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I1j0000004CQdEAM_1723780d429',
+                isOfflineSupportEnabled: false
+            }
+        );
+    };
+
+    if (!window.embedded_svc) {
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://gittigidiyor--TEST.cs102.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+        s.onload = function() {
+            initESW(null);
+        };
+        document.body.appendChild(s);
+    } else {
+        initESW('https://service.force.com');
+    }
+
 </script>
 
-
 <script language="JavaScript" type="text/javascript">
-function startEmbeddedChat(pCaseId) {
+function startEmbeddedChat(pCaseId,pFirstName,pLastName) {
 
 	embedded_svc.liveAgentAPI.startChat({
 		directToAgentRouting: {
-			buttonId: '5730X000000XfWn',
+			buttonId: '5731j0000004DEb',
 			fallback: true
 		},
 		extraPrechatInfo: [{
@@ -101,12 +140,41 @@ function startEmbeddedChat(pCaseId) {
 			}],
 			"entityName":"Case",
 			"saveToTranscript":"CaseID"
-		}],
+		},
+		{
+		  "entityFieldMaps": [{
+			"doCreate":false,
+			"doFind":false,
+			"fieldName":"LastName",
+			"isExactMatch":true,
+			"label":"Last Name"
+		  }, {
+			"doCreate":false,
+			"doFind":false,
+			"fieldName":"FirstName",
+			"isExactMatch":true,
+			"label":"First Name"
+		  }],
+		  "entityName":"Contact",
+		  "showOnCreate":true
+		}
+
+
+		],
 		extraPrechatFormDetails: [{
 			"label":"Case ID",
 			"value":pCaseId,
 			"transcriptFields":[],
 			"displayToAgent":true
+		},
+		{
+		  "label": "First Name",
+		  "value": pFirstName,
+		  "displayToAgent": true
+		}, {
+		  "label": "Last Name",
+		  "value": pLastName,
+		  "displayToAgent": true
 		}]
 	});
 }
